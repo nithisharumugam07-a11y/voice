@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice QR</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <style>
+        body { font-family: Poppins, sans-serif; background: #f8f3e9; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+        .card { background: #fff; padding: 32px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,.1); text-align: center; }
+        #qrcode { margin: 16px auto; display: inline-block; }
+        h1 { color: #b03a5b; margin: 0 0 8px; }
+        p { color: #555; word-break: break-all; }
+        audio { margin-top: 16px; width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Voice Note</h1>
+        <p>Scan to play</p>
+        <div id="qrcode"></div>
+        <audio controls src="WhatsApp%20Audio%202026-11-25%20at%204.06.42%20PM.mp4"></audio>
+    </div>
+    <script>
+        const url = window.location.origin + "/WhatsApp%20Audio%202026-11-25%20at%204.06.42%20PM.mp4";
+        new QRCode(document.getElementById("qrcode"), { text: url, width: 256, height: 256 });
+    </script>
+</body>
+</html>

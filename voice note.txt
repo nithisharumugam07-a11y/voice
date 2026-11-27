@@ -1,0 +1,117 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Arumbeyy ❤️</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<style>
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #ffb6c1, #ffe4e9, #ffc0cb);
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    width: 85%;
+    max-width: 400px;
+    box-shadow: 0 5px 25px #d66b8b;
+}
+
+h1 {
+    color: #e91e63;
+}
+
+h2 {
+    color: #ff4081;
+}
+
+#qrcode {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
+
+#qrcode img {
+    border: 10px solid white;
+}
+
+p {
+    color: #a31545;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+button {
+    background: #ff4081;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.heart {
+    font-size: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="heart">❤️ 💗 ❤️</div>
+
+    <h1>For My Arumbeyy</h1>
+    <h2>From His Karumbeyy 💕</h2>
+
+    <p>
+        You are my favourite person,<br>
+        my happiness and my sweetest feeling.<br>
+        No matter what happens,<br>
+        you will always have a special place in my heart. ❤️
+    </p>
+
+    <div id="qrcode"></div>
+
+    <p><b>Scan this QR for a little surprise! 💌</b></p>
+
+    <audio id="myVoice" controls>
+        <source src="C:\Users\Lenovo\Downloads\Swetha_Birthday_Surprise\WhatsApp Audio 2026-11-25 at 4.06.42 PM.mp4" type="audio/mpeg">
+    </audio>
+
+    <p>With all my love,<br>
+    Your Karumbeyy ❤️</p>
+
+</div>
+
+<script>
+const audio = document.getElementById("myVoice");
+
+// Generate QR code for the voice file
+new QRCode(document.getElementById("qrcode"), {
+    text: "voice.mp3",
+    width: 200,
+    height: 200,
+    colorDark: "#e91e63",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+});
+</script>
+
+</body>
+</html>

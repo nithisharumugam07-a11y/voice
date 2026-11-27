@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f8f3e9">
+    <title>For My Azhagii ❤️</title>
+
+    <meta property="og:title" content="For My Azhagii ❤️">
+    <meta property="og:description" content="A little secret awaits you, my love. Happy Birthday Swetha! 🦚✨">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nithisharumugam07-a11y.github.io/Azhagii/">
+    <meta property="og:image" content="https://nithisharumugam07-a11y.github.io/Azhagii/images/memory-story.jpg">
+    <meta name="twitter:title" content="For My Azhagii ❤️">
+    <meta name="twitter:description" content="A little secret awaits you, my love. Happy Birthday Swetha! 🦚✨">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600&family=Noto+Serif+Tamil:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- OPTIONAL BACKGROUND MUSIC -->
+    <audio id="backgroundMusic" loop>
+        <source src="rathinamo-emotional-orchestral-version-tamil-love-theme-ash-tracks-india_Wb44OVKi.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- MUSIC BUTTON -->
+    <button class="music-button" id="musicButton" onclick="toggleMusic()" aria-label="Toggle music">
+        ♫
+    </button>
+
+    <!-- PAGE 1: SECRET PIN -->
+    <section class="screen active" id="lockScreen">
+        <div class="lock-card">
+            <div class="top-flower">✿</div>
+
+            <p class="eyebrow">A LITTLE SECRET FOR YOU MY LOVE 🐣</p>
+
+            <h1 class="main-heading">
+                Something Special<br>
+                Awaits You...
+            </h1>
+
+            <p class="subheading">
+                Only someone special can unlock this surprise.
+            </p>
+
+            <div class="pin-dots" id="pinDots">
+                <span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="keypad">
+                <button onclick="addDigit('1')">1</button>
+                <button onclick="addDigit('2')">2</button>
+                <button onclick="addDigit('3')">3</button>
+                <button onclick="addDigit('4')">4</button>
+                <button onclick="addDigit('5')">5</button>
+                <button onclick="addDigit('6')">6</button>
+                <button onclick="addDigit('7')">7</button>
+                <button onclick="addDigit('8')">8</button>
+                <button onclick="addDigit('9')">9</button>
+                <button class="key-special" onclick="clearPin()">C</button>
+                <button onclick="addDigit('0')">0</button>
+                <button class="key-special" onclick="deleteDigit()">⌫</button>
+            </div>
+
+            <button class="primary-button" onclick="unlockWebsite()">
+                UNLOCK MY SURPRISE ♡
+            </button>
+
+            <p class="error-message" id="pinError">
+                Oops! That's not the secret PIN D Thanagoo. Try again maa❤️
+            </p>
+
+            <div class="pin-hint" id="pinHint">
+                💡 Hint: YOU + ME
+            </div>
+
+            <p class="small-note">Made with love, just for you.</p>
+        </div>
+    </section>
+
+
+    <!-- PAGE 2: WELCOME -->
+    <section class="screen" id="welcomeScreen">
+        <div class="welcome-content">
+            <p class="eyebrow">A DAY MADE JUST FOR YOU</p>
+
+            <h1 class="welcome-title">
+                Happy Birthday
+                <span>Swetha</span>
+            </h1>
+
+            <p class="tamil-heading">
+                என் அழகி 🦚 🧿 ❤️
+            </p>
+
+            <p class="welcome-description">
+              இந்த Countdown முடிய இன்னும் கொஞ்சம் காத்திரு... ஒவ்வொரு நொடியும் ஒரு அழகான உணர்வை நோக்கி நகர்கிறது. ✨ Countdown முடிந்ததும், உனக்காகக் காத்திருக்கும் நம் அழகான காதல் கதையின் உலகம் திறக்கும்... 💖🦋
+            </p>
+
+            <div class="countdown-section">
+                <p class="countdown-label">COUNTING DOWN TO YOUR SPECIAL DAY</p>
+                <p class="countdown-wait">Wait For The Day You Become 21 Years 🦚❤️</p>
+
+                <div class="countdown">
+                    <div class="count-item">
+                        <span id="days">00</span>
+                        <small>Days</small>
+                    </div>
+                    <div class="count-item">
+                        <span id="hours">00</span>
+                        <small>Hours</small>
+                    </div>
+                    <div class="count-item">
+                        <span id="minutes">00</span>
+                        <small>Minutes</small>
+                    </div>
+                    <div class="count-item">
+                        <span id="seconds">00</span>
+                        <small>Seconds</small>
+                    </div>
+                </div>
+            </div>
+
+            <button class="primary-button" onclick="showScreen('storyScreen')">
+                ENTER OUR STORY ♡
+            </button>
+
+            <p class="small-note">There's so much I want to tell you...</p>
+        </div>
+    </section>
+
+
+    <!-- PAGE 3: OUR STORY -->
+    <section class="screen" id="storyScreen">
+        <div class="chapter-container">
+
+            <p class="eyebrow">CHAPTER ONE · OUR STORY</p>
+
+            <h1 class="chapter-title">
+                Every Love Story<br>
+                Has Its Own Magic...
+            </h1>
+
+            <p class="tamil-heading">
+                ஆனா நம்ம கதையோ எனக்கு ரொம்ப ஸ்பெஷல் ❤️
+            </p>
+
+            <div class="ornament">♡</div>
+
+            <div class="story-text">
+                <p>என் அழகியே... 🦚❤️</p>
+
+                <p>
+                   நீ எனக்கு எவ்வளவு முக்கியமானவள் என்பதை வார்த்தைகளால் விவரிக்க எனக்குத் தெரியவில்லை. ஆனால் ஒன்று மட்டும் எனக்கு நன்றாகத் தெரியும்... என் வாழ்க்கையில் நீ இருப்பது நான் பெற்ற மிக அழகான வரங்களில் ஒன்று. 🥹❤️
+                </p>
+
+                <p>
+                    உன்னுடைய சிரிப்பு என் ஒவ்வொரு நாளையும் அழகாக்குகிறது. உன்னுடைய இருப்பு சாதாரணமான தருணங்களைக்கூட அழகான நினைவுகளாக மாற்றுகிறது. உன்னுடன் நான் செலவிடும் ஒவ்வொரு சின்னச் சின்ன தருணமும், வார்த்தைகளால் சொல்ல முடியாத அளவுக்கு எனக்கு மதிப்பானது. 💗
+                </p>
+
+                <p>
+                    சில நேரங்களில் என் மனதில் இருப்பதையெல்லாம் சரியாக வெளிப்படுத்த முடியாமல் போகலாம். ஆனால் ஒன்று மட்டும் எப்போதும் நினைவில் வைத்துக்கொள்...
+                </p>
+
+                <p class="highlight-text">
+                    நீ எனக்கு எவ்வளவு ஸ்பெஷலானவள், என் வாழ்க்கையில் உனக்கென்று இருக்கும் இடம் எவ்வளவு அழகானது என்பதை ஒருபோதும் மறந்துவிடாதே! 🫂❤️
+                </p>
+            </div>
+
+            <div class="photo-frame">
+                <img src="images/memory-story.jpg" alt="Our special memory">
+                <p>A little memory, a lifetime of feelings ♡</p>
+            </div>
+
+            <button class="primary-button" onclick="showScreen('memoriesScreen')">
+                NEXT · OUR MEMORIES →
+            </button>
+        </div>
+    </section>
+
+
+    <!-- PAGE 4: OUR MEMORIES -->
+    <section class="screen" id="memoriesScreen">
+        <div class="chapter-container wide-container">
+
+            <p class="eyebrow">CHAPTER TWO · THE LITTLE THINGS</p>
+
+            <h1 class="chapter-title">
+                Our Little World
+            </h1>
+
+            <p class="chapter-description">
+                Every picture holds a memory.
+                Every memory holds a feeling.
+                And every feeling reminds me of you.
+            </p>
+
+            <div class="memory-grid">
+
+                <div class="memory-item">
+                    <img src="images/memory-four.jpg" alt="Memory one">
+                    <p>My favourite smile ❤️</p>
+                </div>
+
+                <div class="memory-item">
+                    <img src="images/memory-two.jpg" alt="Memory two">
+                    <p>Little moments, big happiness ♡</p>
+                </div>
+
+                <div class="memory-item">
+                    <img src="images/memory-three.jpg" alt="Memory three">
+                    <p>A memory to keep forever ✨</p>
+                </div>
+
+                <div class="memory-item">
+                    <img src="images/memory-one.jpg" alt="Memory four">
+                    <p>My favourite person 🦚</p>
+                </div>
+
+            </div>
+
+            <p class="memory-ending">
+                I wish I could collect every beautiful moment
+                and keep it close to my heart forever.
+            </p>
+
+            <button class="primary-button" onclick="showScreen('letterScreen')">
+                NEXT · A LETTER FOR YOU →
+            </button>
+        </div>
+    </section>
+
+
+    <!-- PAGE 5: LOVE LETTER -->
+    <section class="screen" id="letterScreen">
+        <div class="chapter-container">
+
+            <p class="eyebrow">மூன்றாம் அத்தியாயம் · என் இதயத்தில் இருந்து</p>
+
+            <h1 class="chapter-title">
+                உனக்கு ஒரு கடிதம்
+            </h1>
+
+            <div class="letter-card">
+                <p class="letter-greeting">என்னவள்... ❤️,</p>
+
+                <p>
+                    இந்த உலகத்தில் உனக்கு என்னால் ஒரு பரிசு கொடுக்க முடிந்தால்,
+                    அது என் கண்களின் வழியாக உன்னை நீயே பார்க்கும் ஒரு வாய்ப்பாகத்தான் இருக்கும்...
+                </p>
+
+                <p>
+                    அப்போதுதான் உனக்குப் புரியும்,
+                    நீ எனக்கு எவ்வளவு அழகானவள்,
+                    எவ்வளவு மதிப்பானவள்,
+                    என் மனதில் எவ்வளவு ஆழமான இடத்தைப் பிடித்திருக்கிறாய் என்று...! 🥹❤️
+                </p>
+
+                <p>
+                    நான் ஒன்றும் முழுமையானவன் இல்லை...
+                    என் மனதில் இருப்பதையெல்லாம்
+                    எப்போதும் அழகாகச் சொல்லவும் தெரியாது...
+                </p>
+
+                <p>
+                    ஆனால் ஒன்று மட்டும் உண்மை,
+                    நீ என் அருகில் இருக்கும்போது
+                    என் மகிழ்ச்சிக்கே ஒரு தனி அழகு வந்துவிடுகிறது. 💗
+                </p>
+
+                <p>
+                    உன் வாழ்க்கையில் முடிவில்லாத மகிழ்ச்சி இருக்கட்டும்...
+                    உன் கனவுகள் ஒவ்வொன்றும் நிஜமாகட்டும்...
+                    உன் பயணத்தில் அழகான வாய்ப்புகள் கிடைக்கட்டும்...
+                    உன் மனதில் எப்போதும் நிம்மதி நிறைந்திருக்கட்டும்...
+                </p>
+
+                <p>
+                    உன் அன்பான மனம் எவ்வளவு அன்புக்கும்,
+                    அக்கறைக்கும் தகுதியானதோ,
+                    அத்தனையும் இந்த வாழ்க்கை உனக்குத் தரட்டும்! ❤️
+                </p>
+
+                <p>
+                    எப்போதும் நீ நீயாக இருப்பதற்கு நன்றி...
+                    என்னுடன் பகிர்ந்துகொண்ட அந்தச் சின்னச் சின்ன தருணங்களுக்கு நன்றி...
+                    என் சாதாரணமான உலகத்தைக்கூட
+                    இவ்வளவு அழகானதாக மாற்றியதற்கு நன்றி! 🫂
+                </p>
+
+                <p class="letter-highlight">
+                    எத்தனை பிறந்தநாட்கள் கடந்து சென்றாலும்,
+                    உன் முகத்தில் இருக்கும் அந்த அழகான சிரிப்பு மட்டும்
+                    என்றென்றும் மறையாமல் இருக்க வேண்டும்...
+                </p>
+
+                <p class="letter-highlight">
+                    ஏனென்றால், உன் சிரிப்பில் எனக்குப் பிடித்த ஒரு அழகான உலகமே இருக்கிறது,
+                    என் அழகியே...! 🦚❤️
+                </p>
+
+                <p class="letter-signature">
+                    எப்போதும் காதலுடன்,<br>
+                    உன்னவன்... ❤️🦚
+                </p>
+            </div>
+
+            <button class="primary-button" onclick="showScreen('birthdayScreen')">
+                கடைசியொரு ஆச்சரியம் உனக்கு →
+            </button>
+        </div>
+    </section>
+
+
+    <!-- PAGE 6: FINAL BIRTHDAY SURPRISE -->
+    <section class="screen final-screen" id="birthdayScreen">
+        <div class="final-content">
+
+            <p class="eyebrow">THE MOST SPECIAL DAY</p>
+
+            <div class="birthday-icon">🎂</div>
+
+            <h1 class="final-title">
+                Happy Birthday
+                <span>My Azhagii!</span>
+            </h1>
+
+            <p class="tamil-heading">
+                இனிய பிறந்தநாள் வாழ்த்துக்கள் என் அழகி! ❤️
+            </p>
+
+            <div class="final-message">
+                <p>
+                    May your days be filled with laughter,
+                    your heart with peace,
+                    and your life with beautiful surprises.
+                </p>
+
+                <p>
+                    Keep shining, keep smiling,
+                    and keep being the wonderful person you are.
+                </p>
+
+                <p class="highlight-text">
+                    You deserve all the happiness in this universe.
+                </p>
+            </div>
+
+            <button class="primary-button celebration-button" onclick="celebrate()">
+                OPEN YOUR SPECIAL GIFT 🎁
+            </button>
+
+            <div id="surpriseMessage" class="surprise-message">
+                <div class="peacock-gift-scene" id="peacockGiftScene" aria-label="A peacock presents a birthday gift">
+                    <div class="peacock-speech">A special gift for my favourite person... 💗</div>
+                    <div class="peacock-character" aria-hidden="true">🦚</div>
+                    <div class="gift-box-wrap" aria-hidden="true">
+                        <div class="gift-box">
+                            <div class="gift-lid"></div>
+                            <div class="gift-ribbon-vertical"></div>
+                            <div class="gift-ribbon-horizontal"></div>
+                            <div class="gift-bow">🎀</div>
+                            <div class="gift-heart">❤️</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="gift-caption">A little gift, wrapped with endless love</p>
+                <h2 class="birthday-reveal-title">HAPPY BIRTHDAY, SWETHA! 🎂</h2>
+                <h2>எனது மயிலே! 🦚</h2>
+                <p>
+                    உன் வாழ்க்கையின் ஒவ்வொரு ஆண்டும் அழகான நினைவுகளாலும் அளவற்ற மகிழ்ச்சியாலும் நிறைந்திருக்கட்டும். ❤️
+                </p>
+                <p>
+                    உன் சிரிப்பு என்றும் மாறாமல், உன் கனவுகள் அனைத்தும் நிஜமாகட்டும். 🥹
+                </p>
+                <p>
+                    நீ எப்போதும் சந்தோஷமாக இருக்க வேண்டும் என்பதுதான் என் மனதின் ஒரே ஆசை! 🦚❤️
+                </p>
+                <p class="final-love">I LOVE YOU, MY AZHAGII! ♡</p>
+                <p class="forever-message">என்றென்றும் உன்னவன்... 🫂</p>
+            </div>
+
+            <p class="final-footer">
+                Made with endless love, just for you.
+            </p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
